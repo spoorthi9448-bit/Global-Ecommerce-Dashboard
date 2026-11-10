@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global E-Commerce Analytics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            🛒 E-Commerce
+        </div>
+
+        <nav>
+            <a href="#" class="active">📊 Dashboard</a>
+            <a href="#">📈 Sales Analysis</a>
+            <a href="#">👥 Customer Insights</a>
+            <a href="#">🌎 Regional Analysis</a>
+            <a href="#">💬 Chat Analytics</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Global E-Commerce Analytics</h1>
+                <p>Sales, Profitability & Customer Insights Dashboard</p>
+            </div>
+
+            <div class="header-user">
+                👤 Admin
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <h2>$1,710,971</h2>
+                <p>Overall Revenue</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Profit</h3>
+                <h2>$288,920</h2>
+                <p>Overall Profit</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Orders</h3>
+                <h2>867</h2>
+                <p>Unique Orders</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Customers</h3>
+                <h2>800</h2>
+                <p>Unique Customers</p>
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Content -->
+        <section class="dashboard-grid">
+
+            <div class="panel">
+                <h2>📈 Sales Overview</h2>
+
+                <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="panel">
+                <h2>📊 Sales by Category</h2>
+
+                <div class="chart-container">
+                <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Customer Insights Section -->
+
+<section class="analysis-section">
+
+    <div class="section-title">
+        <h2>👥 Customer Insights</h2>
+        <p>Customer and order behaviour analysis</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <h2>800</h2>
+            <p>Unique Customers</p>
+        </div>
+
+        <div class="card">
+            <h3>Average Order Value</h3>
+            <h2>$1,973.44</h2>
+            <p>Average sales per order</p>
+        </div>
+
+        <div class="card">
+            <h3>Average Quantity</h3>
+            <h2>6.41</h2>
+            <p>Items per order</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Sales Analysis Section -->
+
+<section class="analysis-section">
+
+    <div class="section-title">
+        <h2>📊 Sales Analysis</h2>
+        <p>Detailed analysis of sales and product performance</p>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <!-- Profit by Category -->
+
+        <div class="panel">
+
+            <h2>💰 Profit by Category</h2>
+
+            <div class="chart-container">
+                <canvas id="profitChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- Top 10 Products -->
+
+        <div class="panel">
+
+            <h2>🏆 Top 10 Products by Sales</h2>
+
+            <div class="chart-container">
+                <canvas id="topProductsChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Sales Analysis Section -->
+
+
+<!-- Regional Analysis Section -->
+
+<section class="analysis-section">
+
+    <div class="section-title">
+        <h2>🌎 Regional Analysis</h2>
+        <p>Sales performance across different regions</p>
+    </div>
+
+    <div class="panel">
+
+    <h2>🌎 Global Sales by Country</h2>
+
+    <div id="worldGlobe" style="width:100%; height:550px;"></div>
+    <div id="countryDetails" style="margin-top:30px;">
+    <h2>🌎 Country Details</h2>
+    <p>Click a country on the globe to view its complete details.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Chat Analytics -->
+
+
+
+        <!-- Chat Analytics -->
+        <section class="chat-section">
+
+            <div class="chat-header">
+                <h2>💬 Chat Analytics</h2>
+                <p>Ask questions about your e-commerce data</p>
+            </div>
+
+
+            <div class="chat-box">
+
+                <div class="bot-message">
+                    <strong>Analytics Assistant</strong>
+                    <p>
+                        Hello! 👋 Ask me something about the e-commerce
+                        dataset.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Example: Which category has the highest sales?"
+                >
+
+                <button onclick="askQuestion()">
+                    Ask
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Global E-Commerce Sales and Customer Insights Dashboard
+            </p>
+            <p>
+                Python • Pandas • Power BI • Flask
+            </p>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
